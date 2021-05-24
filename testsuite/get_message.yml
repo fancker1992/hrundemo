@@ -1,0 +1,18 @@
+config:
+    name: 获取个人信息
+    variables: {}                  # testsuite config variables
+
+testcases:
+-
+    name: /login
+    variables: {}
+    testcase: ./testcases/login.yml
+    extract:
+      token: body.token
+
+
+-
+    name: /getinfo
+    variables:
+        token: $token
+    testcase: ./testcases/getinfo.yml

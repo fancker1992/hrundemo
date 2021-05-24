@@ -1,0 +1,16 @@
+config:
+    name: xxx
+    variables:                  # testsuite config variables
+        varA: "configA"
+        varB: "configB"
+        varC: "configC"
+
+testcases:
+-
+    name: case 1
+    variables:                  # testcase variables
+        varA: "case1A"
+    testcase: /testcases/login.yml
+    export: ["varA", "varB"]    # export variables
+
+

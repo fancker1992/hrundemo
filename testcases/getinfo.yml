@@ -1,0 +1,33 @@
+config:
+    name: testcase description
+    variables:
+        token: 20099490_12_ac848172516276de_1_43526555
+    base_url: http://172.16.1.202:5000
+    verify: false
+teststeps:
+-   name: /info
+    request:
+        headers:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Connection: keep-alive
+            Host: 172.16.1.202:5000
+            Postman-Token: 39e1fd5d-d505-4943-825a-5314a541bad1
+            User-Agent: PostmanRuntime/7.26.5
+        method: GET
+        params:
+            token: $token
+        url: /info
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - application/json
+    -   eq:
+        - body.message
+        - success
+    -   eq:
+        - body.data.age
+        - 18

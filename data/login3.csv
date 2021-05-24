@@ -1,0 +1,8 @@
+casename,username,password,expect
+用户名密码正确,zhaoxiongkuan,12345678,success
+密码错误,zhaoxiongkuan,123456789,用户名/密码错误
+用户名错误,xiongda,12345678,用户名/密码错误
+用户名为空,,123456,请填写用户名
+密码为空,zhaoxiongkuan,,请填写密码
+密码长度非法,zhaoxiongkuan,111,密码长度非法
+错误的case,zhaoxiongkuan,111,密码正确
